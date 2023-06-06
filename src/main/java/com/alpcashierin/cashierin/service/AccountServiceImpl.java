@@ -11,8 +11,8 @@ import java.util.List;
 public class AccountServiceImpl implements AccountService{
     AccountRepository accountRepository = new AccountRepositoryImpl();
     @Override
-    public void loginUser(String username, String password) {
-
+    public boolean loginUser(String username, String password) {
+        return false;
     }
 
     @Override
