@@ -12,6 +12,7 @@ public class Merchant {
     String bannerurl;
     String phone;
 
+
     public Merchant(String name, String username, String password, String address, String logourl, String bannerurl, String phone) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
