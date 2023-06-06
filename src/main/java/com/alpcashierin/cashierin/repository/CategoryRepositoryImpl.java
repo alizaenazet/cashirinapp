@@ -3,6 +3,8 @@ package com.alpcashierin.cashierin.repository;
 import com.alpcashierin.cashierin.entity.Category;
 import com.alpcashierin.cashierin.entity.Product;
 
+import java.util.List;
+
 public class CategoryRepositoryImpl implements  CategoryRepository{
     @Override
     public Category get(String merchantId, String categoryId) {
@@ -10,7 +12,7 @@ public class CategoryRepositoryImpl implements  CategoryRepository{
     }
 
     @Override
-    public Category getAll(String merchantId) {
+    public List<Category> getAll(String merchantId) {
         return null;
     }
 
