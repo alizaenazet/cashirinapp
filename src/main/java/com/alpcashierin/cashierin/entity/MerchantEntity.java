@@ -1,4 +1,7 @@
 package com.alpcashierin.cashierin.entity;
 
-public interface MerchantEntity {
+import java.util.List;
+
+public class MerchantEntity {
+
 }
