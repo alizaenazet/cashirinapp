@@ -3,11 +3,9 @@ package repositoryTest;
 import com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct.GetProductResp;
 import com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct.ProductResp;
 import com.alpcashierin.apiCalls.retrofitInterface.ProductApi;
+import com.alpcashierin.cashierin.entity.Order;
 import com.alpcashierin.cashierin.entity.Product;
-import com.alpcashierin.cashierin.repository.CategoryRepository;
-import com.alpcashierin.cashierin.repository.CategoryRepositoryImpl;
-import com.alpcashierin.cashierin.repository.ProductRepository;
-import com.alpcashierin.cashierin.repository.ProductRepositoryImpl;
+import com.alpcashierin.cashierin.repository.*;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
@@ -23,10 +21,7 @@ public class ProductTest {
 
 
     public static void main(String[] args) throws Exception {
-        CategoryRepository categoryRepository = new CategoryRepositoryImpl();
-        Product product = new Product("rlnYPtiGKlYq-RkBlr2Qp","Coba","cobadoang",20,3000);
-        categoryRepository.addProduct("-Lv6cFB16m6V1Aj91uEcn","844dc042-004a-11ee-be56",product);
-    System.out.println("cok");
+
 
     }
 
