@@ -7,22 +7,25 @@ module com.alpcashierin.cashierin {
     requires gson;
     requires okhttp3;
     opens com.alpcashierin.cashierin to javafx.fxml;
-
     exports com.alpcashierin.cashierin;
-    exports com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getProducts to gson;
+    exports com.alpcashierin.apiCalls.pojosModel.getProduct;
+    opens com.alpcashierin.apiCalls.pojosModel.getProducts to gson;
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.CreateProductResp to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.editProductResp to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.editMerchant to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.loginMerchant to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.loginUserAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.registerUserAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.editUserAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getUserAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.loginAdminAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.registerAdminAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.editAdminAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getAdminAccount to gson;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse.registerOwnerAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.getProduct to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.editProductResp to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.editMerchant to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.loginMerchant to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.loginUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.registerUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.editUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.getUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.loginAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.registerAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.editAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.getAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.registerOwnerAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.categoryResponse.getCategory to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.categoryResponse.createCategory to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.orderResponse.getOrder to gson;
+
 }

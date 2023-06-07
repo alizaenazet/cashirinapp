@@ -1,25 +1,18 @@
 package com.alpcashierin.cashierin.repository;
 
-import com.alpcashierin.apiCalls.pojosModel.productResponse.CreateProductResp.AddProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.addMerchant.AddMerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.editMerchant.EditMerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getMerchant.GetMerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getMerchant.MerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getProducts.GetProductsResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.loginMerchant.LoginMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.addMerchant.AddMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.editMerchant.EditMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.getMerchant.GetMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.getMerchant.MerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.loginMerchant.LoginMerchantResp;
 import com.alpcashierin.apiCalls.retrofitInterface.MerchantApi;
-import com.alpcashierin.apiCalls.retrofitInterface.ProductApi;
 import com.alpcashierin.cashierin.entity.Merchant;
-import com.alpcashierin.cashierin.entity.Product;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class MerchantRepositoryImpl implements MerchantRepository{

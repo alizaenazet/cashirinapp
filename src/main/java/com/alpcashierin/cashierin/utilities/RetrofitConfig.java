@@ -12,4 +12,3 @@ import retrofit2.converter.gson.GsonConverterFactory;
             return retrofit;
         }
     }
-

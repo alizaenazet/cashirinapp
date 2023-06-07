@@ -1,6 +1,7 @@
 package com.alpcashierin.cashierin.service;
 
 import com.alpcashierin.cashierin.entity.Order;
+import com.alpcashierin.cashierin.entity.OrderProductRequeset;
 import com.alpcashierin.cashierin.entity.Payment;
 import com.alpcashierin.cashierin.entity.Product;
 import com.alpcashierin.cashierin.repository.OrderRepository;
@@ -16,7 +17,7 @@ public class OrderServiceIml implements OrderService{
     }
 
     @Override
-    public void createOrder(String merchantUsername, String tableNumber,String note,Integer total ,String tableName, List<Product> products, Payment payment, String cashierName) {
+    public void createOrder(String merchantUsername, String tableNumber, String note, Integer total , String tableName, List<OrderProductRequeset> products, Payment payment, String cashierName) {
             Order order = new Order(tableNumber,tableName,note,total,payment,products,cashierName);
         orderRepository.create(merchantUsername,order);
     }
@@ -27,12 +28,12 @@ public class OrderServiceIml implements OrderService{
     }
 
     @Override
-    public Order getOrder(String merchantUsername, String orderId) {
+    public Order getOrder(String merchantUsername, String orderId) throws Exception {
         return orderRepository.getOrder(merchantUsername,orderId);
     }
 
     @Override
-    public List<Order> getAllOrders(String merchantUsername) {
+    public List<Order> getAllOrders(String merchantUsername) throws Exception {
         return orderRepository.getAll(merchantUsername);
     }
 }

@@ -1,31 +1,25 @@
 package com.alpcashierin.cashierin.repository;
 
-import com.alpcashierin.apiCalls.pojosModel.productResponse.editAdminAccount.EditAdminAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.editUserAccount.EditUserAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getAdminAccount.GetAdminAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getMerchant.GetMerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getMerchant.MerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getUserAccount.GetUserAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getUserAccount.UserAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.loginAdminAccount.LoginAdminAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.loginOwnerAccount.LoginOwnerAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.loginUserAccount.LoginUserAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.registerAdminAccount.RegisterAdminAccountResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.registerOwnerAccount.RegisterOwnerAccount;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.registerUserAccount.RegisterUserAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.editAdminAccount.EditAdminAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.editUserAccount.EditUserAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.getAdminAccount.GetAdminAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.getUserAccount.GetUserAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.getUserAccount.UserAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.loginAdminAccount.LoginAdminAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.loginOwnerAccount.LoginOwnerAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.loginUserAccount.LoginUserAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.registerAdminAccount.RegisterAdminAccountResp;
+import com.alpcashierin.apiCalls.pojosModel.registerOwnerAccount.RegisterOwnerAccount;
+import com.alpcashierin.apiCalls.pojosModel.registerUserAccount.RegisterUserAccountResp;
 import com.alpcashierin.apiCalls.retrofitInterface.AccountApi;
 import com.alpcashierin.cashierin.entity.Account;
-import com.alpcashierin.cashierin.entity.Merchant;
 import com.alpcashierin.cashierin.utilities.RetrofitConfig;
 import retrofit2.Call;
 import retrofit2.Response;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class AccountRepositoryImpl implements AccountRepository{

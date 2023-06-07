@@ -1,10 +1,10 @@
 package com.alpcashierin.cashierin.repository;
 
 import com.alpcashierin.apiCalls.pojosModel.productResponse.CreateProductResp.AddProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.editProductResp.EditProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct.GetProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct.ProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getProducts.GetProductsResp;
+import com.alpcashierin.apiCalls.pojosModel.editProductResp.EditProductResp;
+import com.alpcashierin.apiCalls.pojosModel.getProduct.GetProductResp;
+import com.alpcashierin.apiCalls.pojosModel.getProduct.ProductResp;
+import com.alpcashierin.apiCalls.pojosModel.getProducts.GetProductsResp;
 import com.alpcashierin.apiCalls.retrofitInterface.ProductApi;
 import com.alpcashierin.cashierin.entity.Product;
 import retrofit2.Call;
@@ -12,7 +12,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

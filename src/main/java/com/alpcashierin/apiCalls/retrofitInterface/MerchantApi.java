@@ -1,9 +1,9 @@
 package com.alpcashierin.apiCalls.retrofitInterface;
 
-import com.alpcashierin.apiCalls.pojosModel.productResponse.addMerchant.AddMerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.editMerchant.EditMerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getMerchant.GetMerchantResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.loginMerchant.LoginMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.addMerchant.AddMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.editMerchant.EditMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.getMerchant.GetMerchantResp;
+import com.alpcashierin.apiCalls.pojosModel.loginMerchant.LoginMerchantResp;
 import retrofit2.Call;
 import retrofit2.http.*;
 

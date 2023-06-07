@@ -15,7 +15,7 @@ public class AccountTest {
     public static void main(String[] args) throws Exception {
         AccountRepository accountRepository = new AccountRepositoryImpl();
         System.out.println(Gender.MALE.toString().toLowerCase());
-        Account account = new Account("dewa","dewa123","Dewa","Jago",LocalDate.now(),"+621432526346",Role.OWNER,Gender.MALE);
+        Account account = new Account("bintangs","bintang1233","Dewa","Jago",LocalDate.now(),"+621432526346",Role.OWNER,Gender.MALE);
         accountRepository.addOwner("Lv6cFB16m6V1Aj91uEcn",account);
     }
 }

@@ -1,14 +1,12 @@
 package com.alpcashierin.apiCalls.retrofitInterface;
 
 import com.alpcashierin.apiCalls.pojosModel.productResponse.CreateProductResp.AddProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.editProductResp.EditProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct.GetProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct.ProductResp;
-import com.alpcashierin.apiCalls.pojosModel.productResponse.getProducts.GetProductsResp;
+import com.alpcashierin.apiCalls.pojosModel.editProductResp.EditProductResp;
+import com.alpcashierin.apiCalls.pojosModel.getProduct.GetProductResp;
+import com.alpcashierin.apiCalls.pojosModel.getProducts.GetProductsResp;
 import retrofit2.Call;
 import retrofit2.http.*;
 
-import java.util.List;
 import java.util.Map;
 
 public interface ProductApi {
@@ -23,5 +21,4 @@ public interface ProductApi {
     @PUT("/merchants/{id}/products/{productId}")
     Call<EditProductResp> editProduct(@Path("id")String MerchantId,
         @Path("productId") String productId,@Body Map<String,Object> bodyReq);
-
 }
