@@ -2,7 +2,6 @@ package com.alpcashierin.cashierin.service;
 
 import com.alpcashierin.cashierin.entity.Merchant;
 import com.alpcashierin.cashierin.repository.MerchantRepository;
-import com.alpcashierin.cashierin.repository.ProductRepository;
 import com.alpcashierin.cashierin.utilities.ServiceLocator;
 
 import java.util.List;
@@ -11,13 +10,9 @@ import java.util.Map;
 public class MerchantServiceImpl implements MerchantService{
     MerchantRepository merchantRepository = ServiceLocator.getInstance().getService(MerchantRepository.class);
     @Override
-    public boolean loginMerchant(String username, String password) {
-        if(merchantRepository.loginMerchant(username, password)){
-            return true;
-        }else {
-            return false;
-        }
+    public String loginMerchant(String username, String password) {
 
+        return username;
     }
 
     @Override
@@ -31,17 +26,17 @@ public class MerchantServiceImpl implements MerchantService{
     }
 
     @Override
-    public Merchant getMerchantProfile(String id) {
+    public Merchant getMerchantProfile(String id) throws Exception {
         return merchantRepository.get(id);
     }
 
     @Override
     public List<Merchant> getAllMerchant() {
-        return merchantRepository.getAll();
+        return null;
     }
 
     @Override
-    public void updateMerchantProfile(String id, Map<String,Object> data) {
+    public void updateMerchantProfile(String id, Map<String,Object> data) throws Exception {
         merchantRepository.edit(id, data);
     }
 }

@@ -13,7 +13,7 @@ public class Merchant {
     String phone;
 
 
-    public Merchant(String name, String username, String password, String address, String logourl, String bannerurl, String phone) {
+    public Merchant(String name, String username, String password, String address, String logourl) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.username = username;
