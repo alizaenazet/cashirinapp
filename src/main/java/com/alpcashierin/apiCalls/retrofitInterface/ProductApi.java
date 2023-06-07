@@ -1,6 +1,6 @@
-package com.alpcashierin.apiCalls.retrofitInterface.productApi;
+package com.alpcashierin.apiCalls.retrofitInterface;
 
-import com.alpcashierin.apiCalls.pojosModel.productResponse.GetProductResp;
+import com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct.GetProductResp;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

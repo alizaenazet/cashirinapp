@@ -27,7 +27,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public Product getProduct(String merchantId, String id) {
+    public Product getProduct(String merchantId, String id) throws Exception {
         return productRepository.get(merchantId,id);
     }
 

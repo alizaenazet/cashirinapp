@@ -3,15 +3,13 @@ module com.alpcashierin.cashierin {
     requires javafx.fxml;
     requires retrofit2;
     requires retrofit2.converter.gson;
-
     requires  java.sql;
     requires gson;
-
+    requires okhttp3;
     opens com.alpcashierin.cashierin to javafx.fxml;
-    opens com.alpcashierin.apiCalls.pojosModel.productResponse to gson;
 
-    exports com.alpcashierin.apiCalls.pojosModel.productResponse;
-    //    exports com.alpcashierin.cashierin.controller;
     exports com.alpcashierin.cashierin;
+    exports com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct to gson;
 
 }

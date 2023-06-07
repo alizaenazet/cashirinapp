@@ -14,7 +14,7 @@ public interface ProductService {
     void deleteProduct(String merchantId, String id);
 
 
-    Product getProduct(String merchantId, String id);
+    Product getProduct(String merchantId, String id) throws Exception;
 
 
     List<Product> getAllProduct(String merchantId);

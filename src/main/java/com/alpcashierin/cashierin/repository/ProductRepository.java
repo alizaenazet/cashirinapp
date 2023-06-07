@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface ProductRepository {
-    public Product get(String merchantId,String id);
+    public Product get(String merchantId,String id) throws Exception;
     public List<Product> getAll(String merchantId);
     public  void add(String merchantId,Product product);
     public  void delete(String merchantId,String id);
