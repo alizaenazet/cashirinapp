@@ -14,6 +14,11 @@ module com.alpcashierin.cashierin {
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.CreateProductResp to gson;
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct to gson;
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.editProductResp to gson;
+<<<<<<< Updated upstream
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.editMerchant to gson;
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.loginMerchant to gson;
+=======
+    opens com.alpcashierin.apiCalls.pojosModel.categoryResponse.getCategory to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.categoryResponse.createCategory to gson;
+>>>>>>> Stashed changes
 }
