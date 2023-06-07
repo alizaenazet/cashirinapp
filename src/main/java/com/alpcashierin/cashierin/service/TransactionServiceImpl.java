@@ -16,7 +16,7 @@ public class TransactionServiceImpl implements TransactionService{
     }
 
     @Override
-    public Transaction getTransaction(String merchantId, LocalDate date) {
+    public Transaction getTransaction(String merchantId, LocalDate date) throws Exception {
         return transactionRepository.get(merchantId,date);
     }
 
