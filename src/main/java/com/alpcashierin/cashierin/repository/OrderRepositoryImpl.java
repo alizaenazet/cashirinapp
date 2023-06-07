@@ -7,22 +7,22 @@ import java.util.List;
 
 public class OrderRepositoryImpl implements OrderRepository{
     @Override
-    public void create(String merchantId, Order order) {
+    public void create(String merchantUsername, Order order) {
 
     }
 
     @Override
-    public Order getOrder(String merchantId, String id) {
+    public Order getOrder(String merchantUsername, String id) {
         return null;
     }
 
     @Override
-    public List<Order> getAll(String merchantId) {
+    public List<Order> getAll(String merchantUsername) {
         return null;
     }
 
     @Override
-    public void finish(String merchantId, String orderId) {
+    public void finish(String merchantUsername, String orderId) {
 
     }
 }

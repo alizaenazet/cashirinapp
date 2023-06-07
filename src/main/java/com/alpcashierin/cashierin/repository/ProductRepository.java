@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 public interface ProductRepository {
-    public Product get(String id);
-    public List<Product> getAll();
-    public  void add(Product product);
-    public  void delete(String id);
-    public  void edit(String id, Map<String,Object> changes);
-    public  void updateStock(String id,int stock);
+    public Product get(String merchantId,String id);
+    public List<Product> getAll(String merchantId);
+    public  void add(String merchantId,Product product);
+    public  void delete(String merchantId,String id);
+    public  void edit(String merchantId,String id, Map<String,Object> changes);
+    public  void updateStock(String merchantId,String id,int stock);
 }

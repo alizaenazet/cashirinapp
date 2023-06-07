@@ -7,32 +7,32 @@ import java.util.Map;
 
 public class ProductRepositoryImpl implements ProductRepository{
     @Override
-    public Product get(String id) {
+    public Product get(String merchantId,String id) {
         return null;
     }
 
     @Override
-    public List<Product> getAll() {
+    public List<Product> getAll(String merchantId) {
         return null;
     }
 
     @Override
-    public void add(Product product) {
+    public void add(String merchantId,Product product) {
 
     }
 
     @Override
-    public void delete(String id) {
+    public void delete(String merchantId,String id) {
 
     }
 
     @Override
-    public void edit(String id, Map<String, Object> changes) {
+    public void edit(String merchantId,String id, Map<String, Object> changes) {
 
     }
 
     @Override
-    public void updateStock(String id, int stock) {
+    public void updateStock(String merchantId,String id, int stock) {
 
     }
 }

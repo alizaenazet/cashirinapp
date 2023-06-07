@@ -7,11 +7,20 @@ import java.util.Map;
 
 public interface ProductService {
 
-    void addProduct(String name, String description, Integer stock, int price);
-    void deleteProduct(String id);
-    Product getProduct(String id);
-    List<Product> getAllProduct();
-    void updateStockProduct(String id,int stock);
-    void updateProduct(String id, Map<String, Object> data);
 
+    void addProduct(String merchantId, String name, String description, Integer stock, int price);
+
+
+    void deleteProduct(String merchantId, String id);
+
+
+    Product getProduct(String merchantId, String id);
+
+
+    List<Product> getAllProduct(String merchantId);
+
+    void updateStockProduct(String merchantId, String id, int stock);
+
+
+    void updateProduct(String merchantId, String id, Map<String, Object> data);
 }
