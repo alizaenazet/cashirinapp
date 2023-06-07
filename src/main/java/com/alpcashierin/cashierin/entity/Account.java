@@ -10,10 +10,12 @@ public class Account {
     String lastname;
     String password;
     LocalDate birthdate;
-    int phone;
-    String role;
+    String phone;
+    Role role;
 
-    public Account(String username, String password, String firstname, String lastname, LocalDate birthdate, int phone, String role) {
+    Gender gender;
+
+    public Account(String username, String password, String firstname, String lastname, LocalDate birthdate, String phone, Role role, Gender gender) {
         this.id = UUID.randomUUID().toString();
         this.username = username;
         this.password = password;
@@ -22,6 +24,15 @@ public class Account {
         this.birthdate = birthdate;
         this.phone = phone;
         this.role = role;
+        this.gender = gender;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     public String getId() {
@@ -71,19 +82,12 @@ public class Account {
         this.birthdate = birthdate;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
 }

@@ -16,4 +16,13 @@ module com.alpcashierin.cashierin {
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.editProductResp to gson;
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.editMerchant to gson;
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.loginMerchant to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.loginUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.registerUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.editUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getUserAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.loginAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.registerAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.editAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getAdminAccount to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.registerOwnerAccount to gson;
 }
