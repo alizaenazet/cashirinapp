@@ -11,9 +11,8 @@ import com.alpcashierin.cashierin.entity.Product;
 import com.alpcashierin.cashierin.utilities.RetrofitConfig;
 import retrofit2.Call;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,12 +23,7 @@ public class CategoryRepositoryImpl implements  CategoryRepository {
 
     @Override
     public Category get(String merchantId, String categoryId) throws Exception {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        CategoryApi categoryApi = retrofit.create(CategoryApi.class);
-
+        CategoryApi categoryApi = RetrofitConfig.config(baseUrl).create(CategoryApi.class);
         Call<GetCategoryResp> promp = categoryApi.getCategory(merchantId,categoryId);
         Response<GetCategoryResp> response = promp.execute();
         if (response.code() == 400) throw new Exception("Gagal mengambil");
@@ -49,11 +43,7 @@ public class CategoryRepositoryImpl implements  CategoryRepository {
 
     @Override
     public List<Category> getAll(String merchantId) throws Exception {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-                CategoryApi categoryApi = retrofit.create(CategoryApi.class);
+                CategoryApi categoryApi = RetrofitConfig.config(baseUrl).create(CategoryApi.class);
                 Call<GetCagoriesResp> promp = categoryApi.getAllCategories(merchantId);
                 Response<GetCagoriesResp> response = promp.execute();
                 if (response.code() == 400) throw new Exception("merchant tidak ada");
@@ -75,10 +65,6 @@ public class CategoryRepositoryImpl implements  CategoryRepository {
 
     @Override
     public String add(String merchantId, String name) throws Exception {
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
         CategoryApi categoryApi = RetrofitConfig.config(baseUrl).create(CategoryApi.class);
         Map<String,Object> categoryTemp = new HashMap<>();
         categoryTemp.put("name",name);
@@ -89,19 +75,33 @@ public class CategoryRepositoryImpl implements  CategoryRepository {
     }
 
     @Override
-    public void delete(String merchantId, String categoryId) {
+    public boolean delete(String merchantId, String categoryId) throws Exception {
         CategoryApi categoryApi = RetrofitConfig.config(baseUrl).create(CategoryApi.class);
-
+        Call<Void> promp = categoryApi.deleteCategory(merchantId,categoryId);
+        Response<Void> response = promp.execute();
+        System.out.println(response.code());
+        if(response.code() == 400) throw new Exception("Merchant atau Category tidak ditemukan");
+        return true;
     }
 
     @Override
-    public void edit(String merchantId, String categoryId, String name) {
-
+    public void edit(String merchantId, String categoryId, String name) throws Exception {
+        CategoryApi categoryApi = RetrofitConfig.config(baseUrl).create(CategoryApi.class);
+        Map<String,Object> data = new HashMap<>();
+        data.put("name",name);
+        Call<Void> promp = categoryApi.editCategory(merchantId,categoryId,data);
+        Response<Void> response = promp.execute();
+        if (response.code() == 400)throw new Exception("Category tidak ditemukan");
     }
 
     @Override
-    public void addProduct(String merchantId, String categoryId, Product product) {
-
+    public void addProduct(String merchantId, String categoryId, Product product) throws Exception {
+            CategoryApi categoryApi = RetrofitConfig.config(baseUrl).create(CategoryApi.class);
+            Map<String,Object> data = new HashMap<>();
+            data.put("productId",product.getId());
+            Call<Void> promp = categoryApi.addProductCategory(merchantId,categoryId,data);
+            Response<Void> response= promp.execute();
+            if (response.code() == 400)throw new Exception("Gagal menambahkan produk");
     }
 
 

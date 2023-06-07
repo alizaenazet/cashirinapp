@@ -24,8 +24,9 @@ public class ProductTest {
 
     public static void main(String[] args) throws Exception {
         CategoryRepository categoryRepository = new CategoryRepositoryImpl();
-        System.out.println(categoryRepository.add("-Lv6cFB16m6V1Aj91uEcn","gorengan"));
-        System.out.println("cok");
+        Product product = new Product("rlnYPtiGKlYq-RkBlr2Qp","Coba","cobadoang",20,3000);
+        categoryRepository.addProduct("-Lv6cFB16m6V1Aj91uEcn","844dc042-004a-11ee-be56",product);
+    System.out.println("cok");
 
     }
 

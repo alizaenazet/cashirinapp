@@ -11,7 +11,7 @@ public interface CategoryRepository {
     List<Category> getAll(String merchantId) throws Exception;
     String add(String merchantId, String name) throws Exception;
 
-    void delete(String merchantId, String categoryId);
-    void edit(String merchantId,String categoryId,String name);
-    void addProduct(String merchantId, String categoryId, Product product);
+    boolean delete(String merchantId, String categoryId) throws Exception;
+    void edit(String merchantId,String categoryId,String name) throws Exception;
+    void addProduct(String merchantId, String categoryId, Product product) throws Exception;
 }

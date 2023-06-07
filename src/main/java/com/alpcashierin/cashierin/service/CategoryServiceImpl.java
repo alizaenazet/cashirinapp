@@ -19,7 +19,7 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     @Override
-    public void deleteCategory(String merchantId, String categoryId) {
+    public void deleteCategory(String merchantId, String categoryId) throws Exception {
             categoryRepository.delete(merchantId,categoryId);
     }
 
@@ -34,7 +34,7 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     @Override
-    public void editCategory(String merchantId, String categoryId, String name) {
+    public void editCategory(String merchantId, String categoryId, String name) throws Exception {
         categoryRepository.edit(merchantId,categoryId,name);
     }
 }

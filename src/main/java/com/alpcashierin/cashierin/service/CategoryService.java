@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface CategoryService {
     public void createCategory(String merchantId,String name) throws Exception;
-    public  void deleteCategory(String merhantId, String categoryId);
+    public  void deleteCategory(String merhantId, String categoryId) throws Exception;
     public Category getCategory(String merchantId, String categoryId) throws Exception;
     public List<Category> getAllCategory(String merchantId) throws Exception;
-    public  void editCategory(String merchantId, String categoryId, String name);
+    public  void editCategory(String merchantId, String categoryId, String name) throws Exception;
 }
