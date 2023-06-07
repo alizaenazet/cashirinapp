@@ -10,6 +10,9 @@ module com.alpcashierin.cashierin {
 
     exports com.alpcashierin.cashierin;
     exports com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.getProducts to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.CreateProductResp to gson;
     opens com.alpcashierin.apiCalls.pojosModel.productResponse.getProduct to gson;
+    opens com.alpcashierin.apiCalls.pojosModel.productResponse.editProductResp to gson;
 
 }

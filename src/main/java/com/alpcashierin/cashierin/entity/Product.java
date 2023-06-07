@@ -9,6 +9,14 @@ public class Product {
     int stock = 0;
     int Price;
 
+    public Product(String id, String name, String description, int stock, int price) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.stock = stock;
+        Price = price;
+    }
+
     public Product( String name, String description, int stock, int price) {
         this.id = UUID.randomUUID().toString();
         this.name = name;

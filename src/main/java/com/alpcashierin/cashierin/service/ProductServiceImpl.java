@@ -14,15 +14,16 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void addProduct(String merchantId, String name, String description, Integer stock, int price) {
+    public void addProduct(String merchantId, String name, String description, Integer stock, int price,String categoryId) throws Exception {
         if(description.isBlank() || description == null) description = "";
         if(stock == null) stock = 0;
         Product product = new Product(name,description,stock,price);
-        productRepository.add(merchantId,product);
+        if (categoryId.isBlank()) categoryId = "";
+        productRepository.add(merchantId,product,categoryId);
     }
 
     @Override
-    public void deleteProduct(String merchantId, String id) {
+    public void deleteProduct(String merchantId, String id) throws Exception {
         productRepository.delete(merchantId,id);
     }
 
@@ -32,17 +33,17 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public List<Product> getAllProduct(String merchantId) {
+    public List<Product> getAllProduct(String merchantId) throws Exception {
         return  productRepository.getAll(merchantId);
     }
 
     @Override
-    public void updateStockProduct(String merchantId, String id, int stock) {
+    public void updateStockProduct(String merchantId, String id, int stock) throws Exception {
         productRepository.updateStock(merchantId,id,stock);
     }
 
     @Override
-    public void updateProduct(String merchantId,String id, Map<String, Object> data) {
+    public void updateProduct(String merchantId,String id, Map<String, Object> data) throws Exception {
         productRepository.edit( merchantId,id,data);
     }
 }
