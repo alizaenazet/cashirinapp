@@ -14,6 +14,7 @@ public class Order {
     Payment payment;
     Status status;
     String cashierName;
+    List<OrderProductRequeset > products;
 
     public String getCashierName() {
         return cashierName;
@@ -23,10 +24,22 @@ public class Order {
         this.cashierName = cashierName;
     }
 
-    List<Product> products;
 
-    public Order( String tableNumber, String orderName, String note, int total, Payment payment,List<Product> products,String cashiername) {
+
+    public Order( String tableNumber, String orderName, String note, int total, Payment payment,List<OrderProductRequeset> products,String cashiername) {
         this.orderNumber = UUID.randomUUID().toString();
+        this.tableNumber = tableNumber;
+        this.orderName = orderName;
+        this.note = note;
+        this.date = LocalDate.now();
+        this.total = total;
+        this.payment = payment;
+        this.status = Status.PROCESS;
+        this.products = products;
+        this.cashierName = cashiername;
+    }
+    public Order( String orderNumber,String tableNumber, String orderName, String note, int total, Payment payment,List<OrderProductRequeset> products,String cashiername) {
+        this.orderNumber = orderNumber;
         this.tableNumber = tableNumber;
         this.orderName = orderName;
         this.note = note;
@@ -102,11 +115,11 @@ public class Order {
         this.status = status;
     }
 
-    public List<Product> getProducts() {
+    public List<OrderProductRequeset> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<OrderProductRequeset> products) {
         this.products = products;
     }
 }

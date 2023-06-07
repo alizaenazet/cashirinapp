@@ -14,27 +14,27 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     @Override
-    public void createCategory(String merchantId, String name) {
+    public void createCategory(String merchantId, String name) throws Exception {
         categoryRepository.add(merchantId,name);
     }
 
     @Override
-    public void deleteCategory(String merchantId, String categoryId) {
+    public void deleteCategory(String merchantId, String categoryId) throws Exception {
             categoryRepository.delete(merchantId,categoryId);
     }
 
     @Override
-    public Category getCategory(String merchantId, String categoryId) {
+    public Category getCategory(String merchantId, String categoryId) throws Exception {
         return categoryRepository.get(merchantId,categoryId);
     }
 
     @Override
-    public List<Category> getAllCategory(String merchantId) {
+    public List<Category> getAllCategory(String merchantId) throws Exception {
         return categoryRepository.getAll(merchantId);
     }
 
     @Override
-    public void editCategory(String merchantId, String categoryId, String name) {
+    public void editCategory(String merchantId, String categoryId, String name) throws Exception {
         categoryRepository.edit(merchantId,categoryId,name);
     }
 }

@@ -23,5 +23,4 @@ public interface ProductApi {
     @PUT("/merchants/{id}/products/{productId}")
     Call<EditProductResp> editProduct(@Path("id")String MerchantId,
         @Path("productId") String productId,@Body Map<String,Object> bodyReq);
-
 }

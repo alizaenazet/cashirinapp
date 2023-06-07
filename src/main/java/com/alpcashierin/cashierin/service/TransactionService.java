@@ -6,6 +6,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface TransactionService {
-    Transaction getTransaction(String merchantId, LocalDate date);
+    Transaction getTransaction(String merchantId, LocalDate date) throws Exception;
     List<Transaction> getAllTransaction(String merchantId);
 }
