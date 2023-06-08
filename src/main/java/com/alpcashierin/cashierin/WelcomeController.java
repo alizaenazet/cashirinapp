@@ -1,14 +1,30 @@
 package com.alpcashierin.cashierin;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class WelcomeController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextField fieldPassword;
+
+    @FXML
+    private TextField fieldUsername;
+
+    @FXML
+    void handlLogout(ActionEvent event) {
+
     }
+
+    @FXML
+    void handleLogin(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handleRegis(ActionEvent event) {
+
+    }
+
 }

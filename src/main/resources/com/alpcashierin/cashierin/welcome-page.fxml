@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.alpcashierin.cashierin.WelcomeController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alpcashierin.cashierin.WelcomeController">
+   <children>
+      <Button layoutX="28.0" layoutY="726.0" mnemonicParsing="false" onAction="#handlLogout" prefHeight="51.0" prefWidth="108.0" text="Exit" />
+      <Text layoutX="393.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: a;" text="Cashirin App" textAlignment="CENTER">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Text>
+      <TextField fx:id="fieldUsername" layoutX="393.0" layoutY="229.0" prefHeight="49.0" prefWidth="357.0" promptText="Merchant username" />
+      <Text layoutX="386.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="fieldPassword" layoutX="391.0" layoutY="332.0" prefHeight="49.0" prefWidth="357.0" promptText="Merchant username" />
+      <Text layoutX="384.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <HBox layoutX="449.0" layoutY="395.0" prefHeight="38.0" prefWidth="237.0" spacing="15.0" AnchorPane.leftAnchor="449.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleRegis" prefHeight="32.0" prefWidth="119.0" text="Register" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="32.0" prefWidth="119.0" text="Login" textAlignment="CENTER" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
